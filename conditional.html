@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="conditional.js">
+</head>
+<body>
+    <script src="conditional.js"></script>
+    <p id="para">hii</p>
+    <button type="button" onclick="myfunction()">click</button>
+    <script>
+    function myfunction(){
+        document.getElementById("para").innerHTML="hello";
+        if(flag==true){
+        document.write("clicked on ok");
+        }
+    else{
+     document.write("clicked on cancel");
+    }
+    }
+    </script>
+</body>
+</html>
