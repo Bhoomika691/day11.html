@@ -1,0 +1,11 @@
+let num1=["apple","mango","cherry"];
+console.log(num1);
+let num2=["banana",1];
+console.log(num2);
+console.log(num1[0][4]);
+console.log(num1[0].length);
+console.log(num2[0].length);
+console.log(num1[3]="orange");
+console.log(num1[3]);
+console.log(num1[2]);
+console.log(num2.length);
