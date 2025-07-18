@@ -10,3 +10,6 @@ let greet=function()
     console.log("hello");
 }
 m(greet,100);
+m(function(){
+    console.log("namaste");
+},1000);
