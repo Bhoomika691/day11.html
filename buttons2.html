@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        const person={
+            firstName:"Kurva",
+            lastName:"Bhoomika"
+        };
+        let text= "bot: " + person.firstName+"<br>";
+        text+= "Bracket: "+ person["lastName"];
+        document.getElementById("demo").innerHTML = text;
+        //3.Display using object.html
+        let loopText=" ";
+        for(let x in person){
+            loopText+=person[x]+" ";
+        }
+        document.getElementById("byLoop").innerHTML="By Loop:"+loopText;
+        //4.Display using JSON.stringify()
+        const str=JSON.stringify(person);
+        document.getElementById("bystringify").innerHTML="By JSON.stringify"
+    </script>
+</body>
+</html>
