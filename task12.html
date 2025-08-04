@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><
+    <button id="setIntervalBtn">Set Interval</button>
+    <button id="clearIntervalBtn">Clear Interval</button>
+    <script>
+    let setIntervalBtn = document.getElementById("setIntervalBtn");
+    let clearIntervalBtn = document.getElementById("clearIntervalBtn");
+    let uniqueId = null;
+    setIntervalBtn.onclick = function(){
+        let counter=0;
+        uniqueId = setInterval(function(){
+        console.log(counter);
+        counter = counter + 1;
+     },2000);
+     console.log("Interval ID:" + uniqueId);     
+    }
+    clearIntervalBtn.onclick = function(){
+        clearIntervalBtn(uniqueId);
+        console.log("Interval stopped");     
+    }
+    </script>
+</body>
+</html>
