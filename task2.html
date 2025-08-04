@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person={
+            name:"bhoomika",
+            age:19,
+            city:"Gadwal",
+            cricketer:{
+                score1:4,
+                score2:6,
+                score3:6,
+                total:function score(){
+                    return(this.score1+this.score2+this.score3);
+                }
+            }
+        }
+        console.log(person);
+        console.log(person.cricketer);
+        console.log(person.cricketer.total());
+        //eligibility to play the next level
+        let score=prompt("Enter your score");
+        if(score>=100){
+            console.log("Eligible");
+        }
+        else{
+            console.log("Not Eligible")
+        }
+        //Game mode
+        let gamemode=prompt("Enter your gememode(Easy,Medium,Hard)");
+        if(gamemode=="Easy"){
+            console.log("easy level");
+        }
+        else if(gamemode=="Medium"){
+            console.log("medium level")
+        }
+        else{
+            console.log("hard level")
+        }
+    </script>
+</body>
+</html>
