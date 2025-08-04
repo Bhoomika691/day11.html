@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*let counter=0;
+    setInterval(function(){
+    console.log(counter);
+    counter = counter+1;
+    },5000);*/
+    let counter = 0;
+    let timerId=setInterval(function(){
+        console.log(counter);
+        counter = counter + 1;
+        if(counter>5){               //stop the counter reaches 6
+            clearInterval(timerId);  //stop the interval
+            console.log("counter stopped");
+        }
+    },2000);
+    </script>
+</body>
+</html>
