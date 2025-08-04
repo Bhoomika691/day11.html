@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Netflix Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+    /* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #111;
+}
+
+.logo {
+  width: 100px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+nav ul li:hover {
+  color: #e50914;
+}
+
+/* Banner */
+.banner {
+  background-image: url('https://tse1.mm.bing.net/th/id/OIP.61E1UaSAiZvMq2HVos9M8gHaEK?pid=Api&P=0&h=180');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 60px 30px;
+}
+
+.banner-content h1 {
+  font-size: 3rem;
+}
+
+.banner-content p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.buttons button {
+  margin-top: 20px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttons button:first-child {
+  background-color: white;
+  color: black;
+}
+
+.buttons button:last-child {
+  background-color: rgba(51, 51, 51, 0.5);
+  color: white;
+}
+
+/* Rows */
+.row {
+  padding: 20px;
+}
+
+.row h2 {
+  margin-bottom: 10px;
+}
+
+.row-posters {
+  display: flex;
+  overflow-x: scroll;
+  gap: 10px;
+}
+
+.row-posters img {
+  width: 150px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.row-posters img:hover {
+  transform: scale(1.1);
+}
+
+</style>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" />
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>TV Shows</li>
+        <li>Movies</li>
+        <li>New & Popular</li>
+        <li>My List</li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Stranger Things</h1>
+      <p>Watch the new season now</p>
+      <div class="buttons">
+        <button>Play</button>
+        <button>My List</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Movie rows -->
+  <section class="row">
+    <h2>Trending Now</h2>
+    <div class="row-posters">
+      <img src="https://image.tmdb.org/t/p/w200/8Y43POKjjKDGI9MH89NW0NAzzp8.jpg" alt="Movie 1" />
+      <img src="https://image.tmdb.org/t/p/w200/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" alt="Movie 2" />
+      <img src="https://image.tmdb.org/t/p/w200/2CAL2433ZeIihfX1Hb2139CX0pW.jpg" alt="Movie 3" />
+      <!-- Add more posters -->
+    </div>
+     <div class="login-container">
+    <form class="login-form">
+      <h1>Sign In</h1>
+      <input type="email" placeholder="Email or phone number" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Sign In</button>
+
+      <div class="form-help">
+        <label><input type="checkbox" /> Remember me</label>
+        <a href="#">Need help?</a>
+      </div>
+
+      <p class="signup">New to Netflix? <a href="#">Sign up now</a>.</p>
+  </section>
+</body>
+</html>
