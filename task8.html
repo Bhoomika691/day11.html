@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea id="message" rows="5" cols="40"></textarea><br><br>
+    <button id="saveButton">Save</button>
+    <script>
+        let saveButton=document.getElementById("saveButton");
+        let textAreaElement=document.getElementById("message");
+
+        saveButton.onclick=function(){
+            let userEnteredIdText=textAreaElement.value;
+            localStorage.setItem("userEnteredText",userEnteredIdText);
+        }
+        let storedUserInputValue=localStorage.getItem("userEnteredText");
+        if(storedUserInputValue==null){
+            textAreaElement.value="";
+        }else{
+            textAreaElement.value=storedUserInputValue;
+        }
+    </script>
+</body>
+</html>
